@@ -22,12 +22,10 @@ class Register extends Component {
       [name]: value
     })
 
-    console.log(this.state);
   }
 
   submitChange = (e) => {
     e.preventDefault();
-    console.log(this.state);
 
     const { email, name, password } = this.state;
     fetch(server + "/register", {
@@ -41,7 +39,6 @@ class Register extends Component {
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data);
       if (data === "success") {
         this.props.onClick("SignIn");
       }
