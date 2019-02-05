@@ -8,7 +8,6 @@ const FaceRecognition = ({ picUrl, box }) => {
             <div className="absolute">
                 <img src={picUrl} alt="pic" id="inputImage" />
                 {box.map(faceInfo => <BoundingBox key={faceInfo.id} box={faceInfo} />)}
-                {console.log(box[0])}
             </div>
         </div>
     )

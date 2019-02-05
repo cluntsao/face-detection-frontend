@@ -81,7 +81,6 @@ class App extends Component {
         })
         .then(res => res.json())
         .then(count => {
-          console.log(count);
           this.setState({
             user: Object.assign(this.state.user, {entries: count})
           })
@@ -120,11 +119,9 @@ class App extends Component {
   }
 
   updateUserInfo = (obj) => {
-    console.log(obj);
     this.setState({
       user: Object.assign(this.state.user, obj)
     })
-    console.log(this.state);
   }
 
   render() {

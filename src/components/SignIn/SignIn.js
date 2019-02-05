@@ -34,7 +34,6 @@ class SignIn extends Component {
     })
     .then(res => res.json())
     .then(res => {
-      console.log(res);
       if (res.msg === "success") {
         this.props.updateUserInfo(res);
         this.props.onClick("Home");
